@@ -93,7 +93,26 @@ GenerateText.prototype.getRandomSentence = function () {
 }
 
 // Method to GenerateNewText constructor that generates a paragraph from random sentences
+GenerateText.prototype.getRandomParagraph = function () {
+    let paragraph = "";
+    let charPerParagraph = 250;
+    let firstSentence = true;
 
+    while (paragraph.length < charPerParagraph)
+    {
+        if(firstSentence)
+        {
+            paragraph += this.getRandomSentence();
+            firstSentence = false;
+        }
+        else
+        {
+            paragraph += " " + this.getRandomSentence();
+        }
+    }
+
+    return paragraph;
+}
 
 //method to the GenerateNewText constructor function that generate multiple paragraphs to user specs
 
