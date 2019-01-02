@@ -23,7 +23,7 @@ function GenerateText() {
         "There is no such thing as a rose move, you can always just match.",
         "It would be rude of me to not offer beta.",
         "Homie, you can dip in my chalk.",
-        "The difference between an arete and a lip traverse? Only perspective."
+        "The difference between an arete and a lip traverse? Only perspective.",
         "I've got kneebar beta for your proj.",
         "At some point we're going to have to stop calling every line with a toe hook or a handflip futuristic.",
         "Climbing is either a beautiful gift or a curse.",
@@ -87,8 +87,13 @@ let proClimbers = [
     "Alex Puccio",
 ];
 //Method to GenreateNewText constructor that generates a random sentence
+GenerateText.prototype.getRandomSentence = function () {
+    let sentence = this.sentences[Math.floor(Math.random() * this.sentences.length)];
+    return sentence;
+}
 
 // Method to GenerateNewText constructor that generates a paragraph from random sentences
+
 
 //method to the GenerateNewText constructor function that generate multiple paragraphs to user specs
 
