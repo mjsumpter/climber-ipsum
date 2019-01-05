@@ -115,5 +115,15 @@ GenerateText.prototype.getRandomParagraph = function () {
 }
 
 //method to the GenerateNewText constructor function that generate multiple paragraphs to user specs
+GenerateText.prototype.getAllParagraphs = function (numParagraphs) {
+    let ipsumText = "";
+    for(let i = 0; i < numParagraphs; i++)
+    {
+        ipsumText += this.getRandomParagraph();
+        ipsumText += "\n\n";
+    }
+
+    return ipsumText;
+}
 
 module.exports = loremIpsum;
